@@ -1,15 +1,16 @@
-package com.gahyun.attendanve
+package com.example.attendance
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
-@HiltAndroidApp
+/**
+ * 앱의 Application 클래스
+ */
 class AttendanceApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Timber 초기화 (디버그 빌드에서만)
+        // Timber 초기화
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
