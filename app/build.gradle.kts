@@ -3,16 +3,14 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-parcelize")
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android") version "2.51"
 }
 
 android {
-    namespace = "com.gahyun.attendhada"
+    namespace = "com.example.attendance"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.gahyun.attendhada"
+        applicationId = "com.example.attendance"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -77,18 +75,13 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
 
-    // Hilt
-    implementation("com.google.dagger:hilt-android:2.51")
-    kapt("com.google.dagger:hilt-compiler:2.51")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-
-    // Retrofit
+    // Retrofit (나중에 필요)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
-    // DataStore
+    // DataStore (나중에 필요)
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     // Coil (이미지 로딩)
